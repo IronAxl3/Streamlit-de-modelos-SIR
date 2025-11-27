@@ -1,4 +1,4 @@
-# Proyecto Pirata - Modelo SIR con Streamlit
+# Proyecto  - Modelo SIR con Streamlit
 
 Universidad Nacional Mayor de San Marcos  
 Facultad de Ciencias Matemáticas  
