@@ -91,7 +91,7 @@ def show():
             "rol": "Estudiante FCM", 
             "foto": "assets/marcela.jpeg",
             "destacado": True,
-            "badge": "📚 Especialista LaTeX",
+            "badge": "📚 Especialista en LaTeX",
             "tipo": "emerald"
         },
         {

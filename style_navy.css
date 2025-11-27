@@ -754,3 +754,55 @@ html, body, [class*="css"] {
 /*/*
 
 
+
+
+
+
+
+/* === ESTILOS SIMPLES PARA ASIGNACIÓN 1 === */
+
+.simple-header {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-left: 5px solid var(--accent-color);
+}
+
+.simple-header h1 {
+    color: var(--text-primary);
+    margin: 0;
+    font-size: 2rem;
+}
+
+.simple-header p {
+    color: var(--text-secondary);
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+}
+
+.simple-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.simple-card h2 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.simple-footer {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
