@@ -13,7 +13,7 @@ def local_css(file_name):
 def show():
     local_css("style_navy.css")
     
-    # Header simple
+    
     st.markdown("""
     <div class="simple-header">
         <h1>👥 Modelo SIR - Propagación de Sectas</h1>
@@ -21,7 +21,7 @@ def show():
     </div>
     """, unsafe_allow_html=True)
 
-    # Modelo matemático
+    
     st.markdown("""
     <div class="simple-card">
         <h2>📈 Modelo con Inmunización Preventiva</h2>
@@ -45,7 +45,7 @@ def show():
     </div>
     """, unsafe_allow_html=True)
 
-    # Parámetros
+    
     st.markdown("""
     <div class="simple-card">
         <h2>🎚️ Parámetros de Simulación</h2>
@@ -65,14 +65,14 @@ def show():
     
     st.markdown("</div>", unsafe_allow_html=True)
 
-    # Simulación
+    
     try:
         S0 = N - I0
         R0 = 0
 
         S, I, R, t = solve_sir_extended(N, I0, R0, beta, gamma, alpha, t_max)
 
-        # Gráfico
+        
         st.markdown("""
         <div class="simple-card">
             <h2>📊 Evolución de la Secta</h2>
@@ -81,7 +81,7 @@ def show():
         fig = plot_sir_profesional(S, I, R, t, title="Propagación de sectas en comunidad universitaria")
         st.pyplot(fig)
         
-        # Métricas
+        
         pico_dia = t[np.argmax(I)]
         pico_val = int(max(I))
         final_miembros = int(I[-1])
@@ -98,7 +98,7 @@ def show():
         
         st.markdown("</div>", unsafe_allow_html=True)
         
-        # Análisis
+        
         st.markdown("""
         <div class="simple-card">
             <h2>💡 Análisis del Reclutamiento</h2>
@@ -116,7 +116,7 @@ def show():
         
         st.markdown("</div>", unsafe_allow_html=True)
         
-        # Conclusión
+        
         st.markdown("""
         <div class="simple-card">
             <h2>🎓 Conclusión</h2>
@@ -128,7 +128,7 @@ def show():
     except Exception as e:
         st.error(f"Error en la simulación: {e}")
 
-    # Footer
+   
     st.markdown("""
     <div class="simple-footer">
         <p>Proyecto Pirata • UNMSM • Facultad de Ciencias Matemáticas</p>

@@ -1,7 +1,7 @@
-/* --- Google Fonts --- */
+/* Estilos */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
 
-/* --- Variables de Color Mejoradas --- */
+
 :root {
     --primary-bg: #0f1117;
     --secondary-bg: #1a1d28;
@@ -14,14 +14,14 @@
     --card-bg: #1e293b;
     --hover-bg: #2d3748;
     
-    /* Colores dorados para efectos especiales */
+    /* Colores dorados para los que más chamebaron */
     --gold-primary: #FFD700;
     --gold-secondary: #FFA500;
     --gold-glow: rgba(255, 215, 0, 0.6);
     --gold-dark: #B8860B;
     --gold-light: #FFF8DC;
     
-    /* Colores esmeralda para Marcela */
+    /* Colores para Marcela */
     --emerald-primary: #10B981;
     --emerald-secondary: #059669;
     --emerald-glow: rgba(16, 185, 129, 0.6);
@@ -31,7 +31,7 @@
     --latex-green: #00FF88;
 }
 
-/* --- Estilos Generales --- */
+/* --- Estilos --- */
 html, body, [class*="css"] {
     font-family: 'Inter', sans-serif;
     color: var(--text-primary);
@@ -43,7 +43,7 @@ html, body, [class*="css"] {
     min-height: 100vh;
 }
 
-/* === TARJETAS DORADAS CON LÁMPARA DE LAVA (Juan e Iron) === */
+/* === TARJETAS DORADAS  === */
 .member-card-gold {
     background: linear-gradient(145deg, 
         #2a1a00 0%, 
@@ -79,7 +79,7 @@ html, body, [class*="css"] {
     }
 }
 
-/* Animación de Lámpara de Lava Dorada */
+/* Lava Dorada */
 .lava-lamp-animation {
     position: absolute;
     top: 0;
@@ -150,7 +150,7 @@ html, body, [class*="css"] {
     }
 }
 
-/* Partículas doradas flotantes */
+
 .gold-sparkle {
     position: absolute;
     font-size: 1.5rem;
@@ -173,7 +173,7 @@ html, body, [class*="css"] {
     }
 }
 
-/* Avatar Dorado */
+
 .member-avatar-gold {
     flex-shrink: 0;
     width: 160px;
@@ -278,7 +278,7 @@ html, body, [class*="css"] {
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
-/* Partículas doradas alrededor del contenido */
+
 .gold-particles {
     position: absolute;
     top: 0;
@@ -322,7 +322,7 @@ html, body, [class*="css"] {
     }
 }
 
-/* === TARJETA ESMERALDA CON LÁMPARA DE LAVA VERDE (Marcela) === */
+
 .member-card-emerald {
     background: linear-gradient(145deg, 
         #001a0d 0%, 
@@ -358,7 +358,7 @@ html, body, [class*="css"] {
     }
 }
 
-/* Animación de Lámpara de Lava Esmeralda */
+
 .emerald-lava-animation {
     position: absolute;
     top: 0;
@@ -429,7 +429,7 @@ html, body, [class*="css"] {
     }
 }
 
-/* Partículas esmeralda flotantes */
+
 .emerald-sparkle {
     position: absolute;
     font-size: 1.5rem;
@@ -461,7 +461,7 @@ html, body, [class*="css"] {
     }
 }
 
-/* Avatar Esmeralda */
+
 .member-avatar-emerald {
     flex-shrink: 0;
     width: 160px;
@@ -529,7 +529,7 @@ html, body, [class*="css"] {
     }
 }
 
-/* Contenido Esmeralda */
+
 .member-content-emerald {
     flex: 1;
     padding: 1rem 0;
@@ -584,7 +584,7 @@ html, body, [class*="css"] {
     text-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
 }
 
-/* Partículas esmeralda alrededor del contenido */
+
 .emerald-particles {
     position: absolute;
     top: 0;
@@ -633,7 +633,7 @@ html, body, [class*="css"] {
     }
 }
 
-/* === TARJETAS NORMALES (Dylan y Jan) === */
+
 .member-card-large {
     background: var(--card-bg);
     border-radius: 20px;
@@ -675,7 +675,7 @@ html, body, [class*="css"] {
     font-size: 1.1rem;
 }
 
-/* --- Estilos Restantes --- */
+
 .header-container {
     padding: 2rem 0;
     border-bottom: 1px solid var(--border-color);
@@ -727,7 +727,7 @@ html, body, [class*="css"] {
     text-align: center;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .member-card-gold,
     .member-card-emerald {
@@ -751,15 +751,7 @@ html, body, [class*="css"] {
 
 
 
-/*/*
 
-
-
-
-
-
-
-/* === ESTILOS SIMPLES PARA ASIGNACIÓN 1 === */
 
 .simple-header {
     background: var(--card-bg);

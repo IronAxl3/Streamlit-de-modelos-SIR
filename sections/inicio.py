@@ -3,7 +3,7 @@ from PIL import Image
 import os
 import base64
 
-# --- Configuración y Utilidades ---
+
 def local_css(file_name):
     try:
         with open(file_name, 'r', encoding='utf-8') as f:
@@ -28,14 +28,14 @@ def get_image_base64(image_path):
 def show():
     local_css("style_navy.css")
 
-    # --- 1. SECCIÓN ENCABEZADO ---
+    
     col_text, col_logo = st.columns([3, 1])
     
     with col_text:
         st.markdown(
             """
             <div class="header-container">
-                <div class="project-badge">✦ Proyecto Pirata</div>
+                <div class="project-badge">✦ Proyecto final</div>
                 <h1 class="main-title">Modelos <span class="title-accent">SIR</span></h1>
                 <p class="header-desc">
                     Una aplicación interactiva de la <b class="highlight">Facultad de Ciencias Matemáticas</b> 
@@ -58,7 +58,7 @@ def show():
         if not logo_found:
             st.markdown('<div class="logo-placeholder">UNMSM</div>', unsafe_allow_html=True)
 
-    # --- 2. SECCIÓN INTEGRANTES CON EFECTOS ESPECIALES ---
+    
     st.markdown('<div class="section-title">🎓 Integrantes del Proyecto</div>', unsafe_allow_html=True)
 
     integrantes = [
@@ -75,7 +75,7 @@ def show():
             "rol": "Estudiante FCM", 
             "foto": "assets/juancook.jpeg",
             "destacado": True,
-            "badge": "🚀 Coolider ",
+            "badge": "🚀 Co-líder ",
             "tipo": "gold"
         },
         {
@@ -96,7 +96,7 @@ def show():
         },
         {
             "nombre": "Jan Mancinelli Vite", 
-            "rol": "Estudiante FCM", 
+            "rol": "Estudiante cariñOSO", 
             "foto": "assets/osito.jpeg",
             "destacado": False,
             "badge": "",
@@ -104,7 +104,7 @@ def show():
         },
     ]
 
-    # Grid de integrantes
+   
     cols = st.columns(2)
     for idx, miembro in enumerate(integrantes):
         with cols[idx % 2]:
@@ -112,7 +112,7 @@ def show():
                 img_base64 = get_image_base64(miembro["foto"])
                 if img_base64:
                     if miembro["destacado"] and miembro["tipo"] == "gold":
-                        # TARJETA DORADA CON LÁMPARA DE LAVA
+                        
                         st.markdown(
                             f"""
                             <div class="member-card-gold">
@@ -145,7 +145,7 @@ def show():
                             unsafe_allow_html=True
                         )
                     elif miembro["destacado"] and miembro["tipo"] == "emerald":
-                        # TARJETA ESMERALDA CON LÁMPARA DE LAVA VERDE
+                        
                         st.markdown(
                             f"""
                             <div class="member-card-emerald">
@@ -178,7 +178,7 @@ def show():
                             unsafe_allow_html=True
                         )
                     else:
-                        # Tarjeta normal
+                        
                         st.markdown(
                             f"""
                             <div class="member-card-large">
@@ -194,7 +194,7 @@ def show():
                             unsafe_allow_html=True
                         )
 
-    # --- 3. SECCIÓN EXPLORAR ---
+   
     st.markdown('<div class="section-title">🔍 ¿Qué podrás explorar?</div>', unsafe_allow_html=True)
     
     col_exp_text, col_exp_img = st.columns([1.5, 1])
@@ -212,7 +212,7 @@ def show():
         st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/SIR_Model.svg/1200px-SIR_Model.svg.png", 
                  use_container_width=True)
 
-    # --- 4. SECCIÓN RESUMEN ---
+   
     st.markdown('<div class="section-title">📚 Modelos en Acción</div>', unsafe_allow_html=True)
 
     summaries = [
@@ -232,7 +232,7 @@ def show():
                 </div>
             """, unsafe_allow_html=True)
 
-    # --- Footer ---
+    
     st.markdown("""
         <div class="footer-elegant">
             <div class="footer-content">

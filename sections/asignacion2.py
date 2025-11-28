@@ -13,7 +13,7 @@ def local_css(file_name):
 def show():
     local_css("style_navy.css")
     
-    # Header simple
+
     st.markdown("""
     <div class="simple-header">
         <h1>🗣️ Modelo SIR - Propagación de Rumores</h1>
@@ -21,7 +21,7 @@ def show():
     </div>
     """, unsafe_allow_html=True)
 
-    # Modelo matemático
+
     st.markdown("""
     <div class="simple-card">
         <h2>📈 Modelo Matemático Adaptado</h2>
@@ -44,7 +44,7 @@ def show():
     </div>
     """, unsafe_allow_html=True)
 
-    # Parámetros
+    
     st.markdown("""
     <div class="simple-card">
         <h2>🎚️ Parámetros de Simulación</h2>
@@ -66,18 +66,18 @@ def show():
     
     st.markdown("</div>", unsafe_allow_html=True)
 
-    # Simulación
+    
     try:
         S0 = N - I0 - R0
         t_max = 15
 
-        # Dos escenarios para comparar
+        
         escenarios = [
             {"k": k, "label": f"k = {k:.3f} (persuasión actual)"},
             {"k": k * 2, "label": f"k = {k*2:.3f} (doble persuasión)"}
         ]
         
-        # Gráfico
+        
         st.markdown("""
         <div class="simple-card">
             <h2>📊 Comparación de Escenarios</h2>
@@ -86,7 +86,7 @@ def show():
         fig, data = plot_sir_comparison(N, I0, R0, b, escenarios, t_max)
         st.pyplot(fig)
         
-        # Resultados
+       
         st.markdown("""
         <div class="simple-card">
             <h2>📈 Resultados a 15 Días</h2>
@@ -106,7 +106,7 @@ def show():
         
         st.markdown("</div>", unsafe_allow_html=True)
         
-        # Análisis
+        
         st.markdown("""
         <div class="simple-card">
             <h2>💡 Interpretación</h2>
@@ -118,7 +118,7 @@ def show():
     except Exception as e:
         st.error(f"Error en la simulación: {e}")
 
-    # Footer
+    
     st.markdown("""
     <div class="simple-footer">
         <p>Proyecto Pirata • UNMSM • Facultad de Ciencias Matemáticas</p>

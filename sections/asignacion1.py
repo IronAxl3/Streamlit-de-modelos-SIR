@@ -8,7 +8,7 @@ def local_css(file_name):
         with open(file_name, 'r', encoding='utf-8') as f:
             st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
     except:
-        pass  # Si falla el CSS, continuar sin estilos
+        pass  
 
 def show():
     local_css("style_navy.css")
@@ -21,7 +21,6 @@ def show():
     </div>
     """, unsafe_allow_html=True)
 
-    # Modelo matemático
     st.markdown("""
     <div class="simple-card">
         <h2>📈 Modelo Matemático</h2>
@@ -44,7 +43,6 @@ def show():
     </div>
     """, unsafe_allow_html=True)
 
-    # Parámetros - CORREGIDOS
     st.markdown("""
     <div class="simple-card">
         <h2>🎚️ Parámetros de Simulación</h2>
@@ -57,18 +55,18 @@ def show():
         I0 = st.number_input("Infectados iniciales", min_value=1, max_value=100, value=1)
     
     with col2:
-        # SLIDER CORREGIDO - rango más amplio y paso más grande
+
         beta = st.slider(
             "Tasa de infección (β)", 
-            min_value=0.000001,    # 1e-6 en lugar de 0
-            max_value=0.0005,      # Más amplio
-            value=0.00014,         # Valor por defecto más razonable
-            step=0.00001,          # Paso más grande
+            min_value=0.000001,   
+            max_value=0.0005,      
+            value=0.00014,         
+            step=0.00001,         
             format="%.6f"
         )
         k = st.slider("Tasa de recuperación (k)", 0.1, 1.0, 0.40, step=0.05)
     
-    # Mostrar valores actuales para debug
+
     st.markdown(f"""
     <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 10px; margin: 1rem 0;">
         <strong>Valores actuales:</strong><br>
@@ -86,7 +84,7 @@ def show():
         
         S, I, R, t = solve_sir(N, I0, R0, beta, k, t_max)
         
-        # Gráfico
+       
         st.markdown("""
         <div class="simple-card">
             <h2>📊 Resultados de la Simulación</h2>
@@ -95,7 +93,7 @@ def show():
         fig = plot_sir(S, I, R, t)
         st.pyplot(fig)
         
-        # Métricas
+       
         pico_dia = t[np.argmax(I)]
         pico_infectados = int(max(I))
         total_infectados = N - int(S[-1])
@@ -111,7 +109,7 @@ def show():
         
         st.markdown("</div>", unsafe_allow_html=True)
         
-        # Análisis
+       
         st.markdown("""
         <div class="simple-card">
             <h2>💡 Análisis del Brote</h2>
@@ -129,7 +127,7 @@ def show():
     except Exception as e:
         st.error(f"Error en la simulación: {e}")
 
-    # Footer
+    
     st.markdown("""
     <div class="simple-footer">
         <p>Proyecto Pirata • UNMSM • Facultad de Ciencias Matemáticas</p>
